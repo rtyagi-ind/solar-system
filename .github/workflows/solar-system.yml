@@ -55,7 +55,9 @@ jobs:
         run: npm run coverage
 
       - name: Archive Test Result
+        continue-on-error: true
         uses: actions/upload-artifact@v3
         with:
-          name: Mocha-Test-Result
-          path: test-results.xml
+          name: Code-Coverage-Result
+          path: coverage
+          retention-days: 5
