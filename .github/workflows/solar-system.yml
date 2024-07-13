@@ -71,6 +71,7 @@ jobs:
           retention-days: 5
 
   docker:
+    needs: [code-coverage, unit-testing]
     name: Containerization
     runs-on: ubuntu-latest
     steps:
