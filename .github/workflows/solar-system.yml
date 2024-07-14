@@ -102,4 +102,4 @@ jobs:
             ${{ vars.DOCKERHUB_USERNAME }}/solar-system:${{github.sha}}
 
           echo Testing image url using wget
-          wget -q -o - 127.0.0.1:3000/live | grep live
+          wget -q -O - 127.0.0.1:3000/live | grep live
